@@ -10,7 +10,7 @@ if (!(file.exists(dataZIP))) {
     download.file(downloadURL, dataZIP)
 }
 
-# get the headers from the first column (since not the whole file will be read)
+# get the headers from the first row (since not the whole file will be loaded)
 dataTxt <- "household_power_consumption.txt"
 dataHeader <- read.table(file = unz(dataZIP, dataTxt), 
                          sep = ";", 
